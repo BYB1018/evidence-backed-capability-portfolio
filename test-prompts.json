@@ -1,0 +1,11 @@
+{
+  "skill":"evidence-backed-capability-portfolio","version":"0.1.0","source_book":"24 条 Bilibili AI 搞钱视频证据包","darwin_compatible":true,
+  "test_cases":[
+    {"id":"should-trigger-01","type":"should_trigger","prompt":"帮我整理 AI 能力，优化猎聘简历。","expected_behavior":"激活本 Skill，建立四类证据和能力卡。","notes":"用户明确方向"},
+    {"id":"should-trigger-02","type":"should_trigger","prompt":"我做过保密项目，怎样证明能力又不泄密？","expected_behavior":"激活本 Skill，设计脱敏证据和可追问问题。","notes":"保密作品集"},
+    {"id":"should-trigger-03","type":"should_trigger","prompt":"数字简历要放哪些项目证据，聊天回答怎么避免夸大？","expected_behavior":"激活本 Skill，让回答回链证据。","notes":"数字简历"},
+    {"id":"should-not-trigger-01","type":"should_not_trigger","prompt":"把我的简历排版换成蓝色双栏。","expected_behavior":"不激活；这是单纯视觉排版。","notes":"样式诱饵"},
+    {"id":"should-not-trigger-02","type":"should_not_trigger","prompt":"母版简历已经完成，帮我筛选这批远程岗位并逐岗定制。","expected_behavior":"不激活；应激活 high-match-remote-application-loop。","notes":"兄弟 Skill 混淆"},
+    {"id":"edge-01","type":"edge_case","prompt":"项目没有业务数字，只有可运行 Demo，还能放作品集吗？","expected_behavior":"激活并把 Demo 作为交付证据，不虚构业务结果。","notes":"证据不完整边界"}
+  ],"minimum_pass_rate":0.8
+}
